@@ -37,18 +37,55 @@ make -j$(nproc)
 
 ### 3. Configuration Files
 
+#### Core Configs (worldserver.conf, authserver.conf)
+
 - [ ] Copy `worldserver.conf.dist` → `worldserver.conf`
 - [ ] Copy `authserver.conf.dist` → `authserver.conf`
 - [ ] Configure database connections in both files
 - [ ] Set server name, realm ID, etc.
-- [ ] **Copy module configs from repo:**
-  ```bash
-  cp ~/acore-live/configs/live/*.conf ~/acore-live/build/etc/
-  ```
-- [ ] **Copy breaking news HTML:**
-  ```bash
-  cp ~/acore-live/configs/live/breakingnews.html ~/acore-live/build/etc/
-  ```
+
+#### Module Configs (IMPORTANT!)
+
+**The configs in `configs/` are NOT automatically used by the server.** You must copy or symlink them to `build/etc/` after building.
+
+**Option A: Copy configs (one-time setup)**
+```bash
+cp ~/acore-live/configs/live/*.conf ~/acore-live/build/etc/
+cp ~/acore-live/configs/live/breakingnews.html ~/acore-live/build/etc/
+```
+
+**Option B: Symlink configs (recommended - stays updated)**
+```bash
+cd ~/acore-live/build/etc/
+
+# Symlink all module configs
+for conf in ~/acore-live/configs/live/*.conf; do
+    ln -sf "$conf" "$(basename $conf)"
+done
+
+# Symlink HTML file
+ln -sf ~/acore-live/configs/live/breakingnews.html breakingnews.html
+```
+
+**Why symlinks?**
+- When you update configs in the repo (`git pull`), changes are immediately live
+- No need to re-copy after every config change
+- Server reads from `build/etc/` but follows symlink to repo
+
+**Workflow for config updates:**
+```bash
+# 1. Edit config in repo
+cd ~/acore-live/configs/live
+nano mod-autobalance.conf
+
+# 2. Commit changes (if you want them tracked)
+git add mod-autobalance.conf
+git commit -m "Increase dungeon difficulty"
+git push origin stable
+
+# 3. If using symlinks: restart server (picks up new config)
+# If using copies: re-copy the file, then restart
+```
 
 ### 4. Auto-Restart Setup (Important!)
 
@@ -161,6 +198,37 @@ Add to crontab: `0 2 * * * /home/oddessax/backup-acore.sh`
 - [ ] Save server IP/hostname
 - [ ] Note any non-default config values
 - [ ] Share connection info with players
+
+## Moving Configs from Test to Live
+
+When you've tested config changes in `acore-test` and want to promote to live:
+
+### Option 1: Copy specific configs
+```bash
+# Copy individual configs that were tested
+cp ~/acore-test/configs/test/mod-time_is_time.conf ~/acore-live/configs/live/
+cp ~/acore-test/configs/test/mod-autobalance.conf ~/acore-live/configs/live/
+# ... etc
+
+# Commit to stable branch
+cd ~/acore-live
+git checkout stable
+git add configs/live/
+git commit -m "Sync live configs with tested settings from test server"
+git push origin stable
+```
+
+### Option 2: Promote all at once
+```bash
+# When promoting testing branch to stable
+# This brings ALL configs, not just the ones you wanted
+cd ~/acore
+git checkout stable
+git merge testing  # Brings all configs from testing
+git push origin stable
+```
+
+**Recommendation:** Use Option 1 for selective updates, Option 2 when doing full branch promotion.
 
 ## Regular Maintenance Tasks
 
