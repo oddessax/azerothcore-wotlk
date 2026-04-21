@@ -76,9 +76,6 @@
 [submodule "modules/mod-auto-gather"]
 	path = modules/mod-auto-gather
 	url = https://github.com/thanhtong89/mod-auto-gather.git
-[submodule "modules/mod-auto-resurrect"]
-	path = modules/mod-auto-resurrect
-	url = https://github.com/Elmegaard/mod-auto-resurrect.git
 [submodule "modules/mod-gm-commands"]
 	path = modules/mod-gm-commands
 	url = https://github.com/chromiecraft/mod-gm-commands.git
