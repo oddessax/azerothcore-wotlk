@@ -22,9 +22,6 @@
 [submodule "modules/mod-custom-login"]
 	path = modules/mod-custom-login
 	url = https://github.com/azerothcore/mod-custom-login.git
-[submodule "modules/DungeonRespawn"]
-	path = modules/DungeonRespawn
-	url = https://github.com/AnchyDev/DungeonRespawn.git
 [submodule "modules/mod-ale"]
 	path = modules/mod-ale
 	url = https://github.com/azerothcore/mod-ale.git
