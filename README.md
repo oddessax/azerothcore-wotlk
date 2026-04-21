@@ -203,6 +203,40 @@ git submodule update
 - **Upstream (Playerbots)**: https://github.com/mod-playerbots/azerothcore-wotlk
 - **Original AzerothCore**: https://github.com/azerothcore/azerothcore-wotlk
 
+## Module Configuration
+
+All module configs are stored in the `configs/` folder and tracked in Git:
+
+```
+configs/
+├── test/    # Test server configs
+└── live/    # Live server configs
+```
+
+### Editing Configs
+
+1. Edit in the repo: `nano ~/acore/configs/test/mod_transmog.conf`
+2. Commit changes: `git add configs/ && git commit -m "Update transmog rates"`
+3. Push to GitHub: `git push origin testing`
+4. Pull into server folder and symlink (see WORKFLOW.md)
+
+### Why Store Configs in Git?
+
+- ✅ Moves with your repo (machine to machine)
+- ✅ Version controlled (track what you changed)
+- ✅ Separate test/live environments
+- ✅ Simple to deploy
+
+### Private Override (If Needed)
+
+If you have truly sensitive config values:
+
+1. Create `configs/private/` (add to `.gitignore`)
+2. Store secrets there
+3. Source them from main config files
+
+Or use environment variables in configs that support it.
+
 ## Notes
 
 - Always test in `acore-test` before promoting to `acore-live`
