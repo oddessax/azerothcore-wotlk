@@ -34,3 +34,66 @@
 [submodule "modules/mod-starter-guild"]
 	path = modules/mod-starter-guild
 	url = https://github.com/azerothcore/mod-starter-guild.git
+[submodule "modules/mod-TimeIsTime"]
+	path = modules/mod-TimeIsTime
+	url = https://github.com/dunjeon/mod-TimeIsTime.git
+[submodule "modules/mod-junk-to-gold"]
+	path = modules/mod-junk-to-gold
+	url = https://github.com/noisiver/mod-junk-to-gold.git
+[submodule "modules/mod-breaking-news-override"]
+	path = modules/mod-breaking-news-override
+	url = https://github.com/azerothcore/mod-breaking-news-override.git
+[submodule "modules/mod-server-auto-shutdown"]
+	path = modules/mod-server-auto-shutdown
+	url = https://github.com/azerothcore/mod-server-auto-shutdown.git
+[submodule "modules/mod-rdf-expansion"]
+	path = modules/mod-rdf-expansion
+	url = https://github.com/azerothcore/mod-rdf-expansion.git
+[submodule "modules/mod-reforging"]
+	path = modules/mod-reforging
+	url = https://github.com/silviu20092/mod-reforging.git
+[submodule "modules/mod-learnspells"]
+	path = modules/mod-learnspells
+	url = https://github.com/noisiver/mod-learnspells.git
+[submodule "modules/mod-no-hearthstone-cooldown"]
+	path = modules/mod-no-hearthstone-cooldown
+	url = https://github.com/BytesGalore/mod-no-hearthstone-cooldown.git
+[submodule "modules/mod-flightmaster-whistle"]
+	path = modules/mod-flightmaster-whistle
+	url = https://github.com/silviu20092/mod-flightmaster-whistle.git
+[submodule "modules/mod-autofish"]
+	path = modules/mod-autofish
+	url = https://github.com/Flerp/mod-autofish.git
+[submodule "modules/mod-missing-objectives"]
+	path = modules/mod-missing-objectives
+	url = https://github.com/forumcorex/mod-missing-objectives.git
+[submodule "modules/mod-tcg-vendors"]
+	path = modules/mod-tcg-vendors
+	url = https://github.com/lightninjay/mod-tcg-vendors.git
+[submodule "modules/mod-reset-raid-cooldowns"]
+	path = modules/mod-reset-raid-cooldowns
+	url = https://github.com/sogladev/mod-reset-raid-cooldowns.git
+[submodule "modules/mod-shared-professions"]
+	path = modules/mod-shared-professions
+	url = https://github.com/thanhtong89/mod-shared-professions.git
+[submodule "modules/mod-auto-gather"]
+	path = modules/mod-auto-gather
+	url = https://github.com/thanhtong89/mod-auto-gather.git
+[submodule "modules/mod-auto-resurrect"]
+	path = modules/mod-auto-resurrect
+	url = https://github.com/Elmegaard/mod-auto-resurrect.git
+[submodule "modules/mod-gm-commands"]
+	path = modules/mod-gm-commands
+	url = https://github.com/chromiecraft/mod-gm-commands.git
+[submodule "modules/mod-abyssal-storage"]
+	path = modules/mod-abyssal-storage
+	url = https://github.com/thanhtong89/mod-abyssal-storage.git
+[submodule "modules/mod-increment-cache-version"]
+	path = modules/mod-increment-cache-version
+	url = https://github.com/sogladev/mod-increment-cache-version.git
+[submodule "modules/mod-easy-respawn"]
+	path = modules/mod-easy-respawn
+	url = https://github.com/silviu20092/mod-easy-respawn.git
+[submodule "modules/mod-starter-wands"]
+	path = modules/mod-starter-wands
+	url = https://github.com/Protonull/mod-starter-wands.git
