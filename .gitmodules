@@ -13,3 +13,24 @@
 [submodule "modules/mod-aoe-loot"]
 	path = modules/mod-aoe-loot
 	url = https://github.com/azerothcore/mod-aoe-loot.git
+[submodule "modules/mod-better-item-reloading"]
+	path = modules/mod-better-item-reloading
+	url = https://github.com/azerothcore/mod-better-item-reloading.git
+[submodule "modules/mod-player-bot-level-brackets"]
+	path = modules/mod-player-bot-level-brackets
+	url = https://github.com/DustinHendrickson/mod-player-bot-level-brackets.git
+[submodule "modules/mod-custom-login"]
+	path = modules/mod-custom-login
+	url = https://github.com/azerothcore/mod-custom-login.git
+[submodule "modules/DungeonRespawn"]
+	path = modules/DungeonRespawn
+	url = https://github.com/AnchyDev/DungeonRespawn.git
+[submodule "modules/mod-ale"]
+	path = modules/mod-ale
+	url = https://github.com/azerothcore/mod-ale.git
+[submodule "modules/mod-npc-gambler"]
+	path = modules/mod-npc-gambler
+	url = https://github.com/azerothcore/mod-npc-gambler.git
+[submodule "modules/mod-starter-guild"]
+	path = modules/mod-starter-guild
+	url = https://github.com/azerothcore/mod-starter-guild.git
